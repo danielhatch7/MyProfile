@@ -20,6 +20,12 @@
     <meta name="msapplication-config" content="./browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+    <style>
+        picture img {
+            width: 100%;
+        }
+    </style>
+
     <!-- Might want to change this title later. -->
     <title>Just Me</title>
 </head>
@@ -28,12 +34,22 @@
     <header>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a>Home</a></li>
+                <li><a href="about/">About</a></li>
+                <li><a href="form/">Form</a></li>
             </ul>
         </nav>
+        <svg>
+            <use href="#menu-icon" />
+        </svg>
     </header>
+
+    <picture>
+        <source srcset="images/portrait-1600w.jpg" media="(min-width: 901px)">
+        <source srcset="images/alternate-profile-900w.jpg" media="(min-width: 501px)">
+        <source srcset="images/profile-500w.jpg" media="(max-width: 500px)">
+        <img src="images/profile-900w.jpg" alt="daniel profile">
+    </picture>
 
     <main>
         <h1>Daniel David Hatch</h1>
@@ -49,7 +65,7 @@
                 all the time in the world then I would write about them all. I hope that one day I will be able to
                 accomplish all of my goals and dreams.</p>
             <figure>
-                <img src="Profile.jpg" alt="Profile picture" width="500" height="500">
+                <img src="images/Profile.jpg" alt="Profile picture" width="500" height="500">
                 <figcaption>Profile picture</figcaption>
             </figure>
             <h3>Key terms</h3>
@@ -79,6 +95,10 @@
                 </ul>
             </li>
             <li>Sports. Any and all.</li>
+            <li>Learning about space</li>
+            <ul>
+                <li>I like staying updated on <a href="https://www.spacex.com/">SpaceX</a></li>
+            </ul>
             <li>Having fun</li>
         </ol>
     </aside>
@@ -86,6 +106,15 @@
     <footer>
         <p>Here is a paragraph to go into my footer. One day it will be more professional.</p>
     </footer>
+    <svg>
+        <symbol id="menu-icon" viewbox="0 0 120 120">
+            <line x1="15" x2="105" y1="25" y2="25" stroke="black" stroke-width="10" stroke-linecap="round" />
+
+            <line x1="15" x2="105" y1="60" y2="60" stroke="blue" stroke-width="10" stroke-linecap="round" />
+
+            <line x1="15" x2="105" y1="95" y2="95" stroke="red" stroke-width="10" stroke-linecap="round" />
+        </symbol>
+    </svg>
 
 </body>
 
